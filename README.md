@@ -155,9 +155,3 @@ GET  /api/notifications/logs        — View all notification logs
 ```
 
 ---
-1. Replace H2 with MySQL/PostgreSQL per service.
-2. Replace hard-coded JWT secret with Spring Cloud Config Server or Vault.
-3. Add Resilience4j circuit breaker on Feign calls.
-4. Use Kafka instead of Feign for notification events (true async).
-5. Add refresh token support.
-6. Admin panel UI can be built separately (React recommended).
