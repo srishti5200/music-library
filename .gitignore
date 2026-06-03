@@ -1,0 +1,20 @@
+# Build
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# Claude
+.claude/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
