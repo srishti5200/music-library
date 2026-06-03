@@ -155,23 +155,6 @@ GET  /api/notifications/logs        — View all notification logs
 ```
 
 ---
-
-## Key Design Decisions
-
-| Concern                  | Approach                                          |
-|--------------------------|---------------------------------------------------|
-| Auth                     | JWT (HS256), same secret across services          |
-| Inter-service comms      | OpenFeign (admin → notification)                  |
-| Song visibility          | `visible` boolean toggled by admin, filtered in user queries |
-| Async notifications      | `@Async` in NotificationService (fire-and-forget) |
-| Database                 | H2 in-memory, one per service                     |
-| Service discovery        | Eureka with basic auth                            |
-| Config sharing           | Each service has own `application.yml`; JWT secret shared by convention |
-
----
-
-## Notes for Production
-
 1. Replace H2 with MySQL/PostgreSQL per service.
 2. Replace hard-coded JWT secret with Spring Cloud Config Server or Vault.
 3. Add Resilience4j circuit breaker on Feign calls.
