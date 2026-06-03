@@ -10,9 +10,6 @@ target/
 .project
 .classpath
 
-# Claude
-.claude/
-
 # VS Code
 .vscode/
 
